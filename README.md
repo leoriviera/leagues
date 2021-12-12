@@ -1,4 +1,4 @@
-# Net Purpose coding challenge
+# leagues (Net Purpose Coding Challenge)
 
 ## Setup
 
@@ -8,44 +8,42 @@
 
 ## The task
 
-**Given a number , _n_, find the _n_ highest and lowest scores in the given array.**
-_This task should take you no longer than 15-30 minutes._
+**Given a number , _n_, find the _n_ highest and lowest scores in the given array.** _This task should take you no longer than 15-30 minutes._
 
 The Net Purpose Hockey League (NPHL) is now in season! At the end of the season, the top _n_ teams get promoted to the division above and the bottom _n_ teams get relegated to the division below.
 
 The division results are provided as an array of teams, as follows:
 
-```
+```js
 [
-  {
-    "name": "Rockets",
-    "points": 64,
-  },
-  {
-    "name": "Cardinals",
-    "points": 77,
-  },
-  {
-    "name": "Bruisers",
-    "points": 51,
-  },
-  {
-    "name": "Renegades",
-    "points": 37,
-  },
-  {
-    "name": "Porpoises",
-    "points": 52,
-  }
-]
-
+    {
+        name: "Rockets",
+        points: 64,
+    },
+    {
+        name: "Cardinals",
+        points: 77,
+    },
+    {
+        name: "Bruisers",
+        points: 51,
+    },
+    {
+        name: "Renegades",
+        points: 37,
+    },
+    {
+        name: "Porpoises",
+        points: 52,
+    },
+];
 ```
 
 Write a function that returns a multi-line string showing the teams that will be promoted and relegated using the format below.
 
 For an _n_ value of 2, the results must be:
 
-```
+```text
 Promote:
 [Highest scoring team]
 [Second highest scoring team]
@@ -57,7 +55,7 @@ Relegate:
 
 For an _n_ value of 3, the results must be:
 
-```
+```text
 Promote:
 [Highest scoring team]
 [Second highest scoring team]
@@ -69,14 +67,13 @@ Relegate:
 [Lowest scoring team]
 ```
 
-There are some finished unit tests in `src/index.spec.ts` to get you started.
-There is an empty function in `src/index.ts` where you can write the implementation.
+There are some finished unit tests in `src/index.spec.ts` to get you started. There is an empty function in `src/index.ts` where you can write the implementation.
 
 ## Constraints
 
 - There could be between 2 and 16 teams in a given division.
 - A team always consists of a `name` string and a `points` integer, which is always positive or 0.
-- If teams both in the top `n` and bottom `n` for the division, the promotion and relegation process will not work and the user must be notified of the problem.
+- If a team is in both the top `n` and bottom `n` for the division, the promotion and relegation process will not work and the user must be notified of the problem.
 
 ## Tips
 
